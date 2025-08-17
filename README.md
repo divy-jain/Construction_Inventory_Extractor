@@ -1,8 +1,8 @@
-# 🔧 Construction Inventory Extractor
+# Construction Inventory Extractor
 
 AI-powered tool to extract inventory data from Excel/PDF files using Azure Document Intelligence.
 
-## 🎯 Features
+## Features
 
 - **Smart Field Detection**: Works with any Excel format - automatically maps columns
 - **Azure AI Integration**: Uses Azure Document Intelligence for accurate table extraction
@@ -11,7 +11,7 @@ AI-powered tool to extract inventory data from Excel/PDF files using Azure Docum
 - **Summary Tables**: Clean results display with confidence scoring
 - **Secure**: Environment variables for API keys
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Prerequisites
 - Node.js 18+ installed
@@ -41,7 +41,7 @@ node server.js
 
 Visit: `http://localhost:3000`
 
-## 🔑 Getting Azure Credentials
+## Getting Azure Credentials
 
 1. **Create Azure Account**: Go to [portal.azure.com](https://portal.azure.com)
 2. **Create Form Recognizer Resource**: 
@@ -53,7 +53,7 @@ Visit: `http://localhost:3000`
    - Copy Endpoint URL and Key 1
    - Add to your `.env` file
 
-## 📊 Target Fields
+## Target Fields
 
 The system extracts data and maps it to these webapp fields:
 
@@ -67,7 +67,7 @@ The system extracts data and maps it to these webapp fields:
 - **Purchase Date**: When item was acquired
 - **Description**: Additional specifications
 
-## 📁 Supported File Formats
+## Supported File Formats
 
 | Format | Support | Notes |
 |--------|---------|-------|
@@ -76,7 +76,7 @@ The system extracts data and maps it to these webapp fields:
 | PNG/JPG | ✅ **Supported** | For Excel screenshots |
 | Excel (.xlsx/.xls) | ⚠️ **Convert First** | Convert to PDF for best results |
 
-## 🏗️ Construction Categories
+## Construction Categories
 
 Auto-categorizes items into:
 - **Power Tools**: Drills, grinders, saws, hammers
@@ -86,7 +86,7 @@ Auto-categorizes items into:
 - **Power Equipment**: Generators, compressors
 - **Construction Materials**: Pipes, wires, beams
 
-## 🔧 Development
+## Development
 
 ### Project Structure
 ```
@@ -113,24 +113,8 @@ const categories = {
 - `PORT`: Server port (default: 3000)
 - `NODE_ENV`: Environment (development/production)
 
-## 🚢 Deployment
+## Deployment
 
-### Deploy to Heroku
-```bash
-# Install Heroku CLI
-npm install -g heroku
-
-# Login and create app
-heroku login
-heroku create your-app-name
-
-# Set environment variables
-heroku config:set AZURE_ENDPOINT=your-endpoint
-heroku config:set AZURE_KEY=your-key
-
-# Deploy
-git push heroku main
-```
 
 ### Deploy to Azure App Service
 ```bash
@@ -151,14 +135,14 @@ git remote add azure <git-clone-url>
 git push azure main
 ```
 
-## 🔒 Security Best Practices
+## Security Best Practices
 
 - ✅ **Environment Variables**: API keys stored in `.env` (not committed)
 - ✅ **Gitignore**: Sensitive files excluded from Git
 - ✅ **Input Validation**: File type and size validation
 - ✅ **Error Handling**: Graceful error messages without exposing internals
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -181,14 +165,14 @@ git push azure main
 - Ensure text is readable (not blurry/handwritten)
 - Try converting to PDF for better OCR
 
-## 📝 API Endpoints
+## API Endpoints
 
 - `GET /` - Main web interface
 - `POST /extract-inventory` - Process uploaded file
 - `GET /test-azure` - Test Azure connection
 - `GET /health` - Health check
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature-name`
@@ -197,11 +181,11 @@ git push azure main
 5. Push: `git push origin feature-name`
 6. Create a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🆘 Support
+## Support
 
 If you encounter issues:
 1. Check the troubleshooting section above
